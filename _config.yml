@@ -107,6 +107,7 @@ author:
   bio              : "「자료구조와 알고리즘을 함께 Java!」</br>4월 23일 출간되었습니다.</br>저자. 손상우</br></br>문의: rerewwwme@gmail.com</br>기록은 기억보다 강하다."
   location         : "Seoul, Korea"
   email            : "rerewwwme@gmail.com"
+  linkedin    : "sangwoo-son"  # LinkedIn 프로필 경로 (linkedin.com/in/ 뒤의 부분)
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"

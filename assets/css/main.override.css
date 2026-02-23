@@ -15,10 +15,15 @@
 }
 
 .page__content p, .page__content li, .page__content dl {
-	font-family: Avenir,'Lato',"애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔바른고딕",NanumBarunGothic,"나눔고딕",NanumGothic,"맑은 고딕","Malgun Gothic","돋움",dotum,AppleGothic,sans-serif;
-	font-size: 18px !important;
-	margin: 0 0 3em !important;
+	font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+	font-size: 16px !important;
 }
+
+/* Heading scale: px so theme’s responsive root (16→22px) doesn’t scale these. design.dev range. */
+.page .page__content h1 { font-size: 32px; }
+.page .page__content h2 { font-size: 24px; }
+.page .page__content h3 { font-size: 20px; }
+.page .page__content h4 { font-size: 18px; }
 
 .page__content ul {
 	margin: 10px 0px 20px 0px;
@@ -38,4 +43,10 @@
 	padding: 0px !important;
 	border: 0px !important;
 	border-radius: 0 !important
+}
+
+.page__content figcaption {
+	font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+	font-size: 14px;
+	text-align: center;
 }
