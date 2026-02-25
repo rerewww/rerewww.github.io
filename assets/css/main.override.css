@@ -50,3 +50,25 @@
 	font-size: 14px;
 	text-align: center;
 }
+
+/* 본문 이미지: 가독성 위해 최대 너비 제한. 반응형 유지. */
+.page__content figure img {
+	max-width: min(560px, 100%);
+	height: auto;
+}
+
+/* figure.align-center: 테마의 flex space-between 덮어서 이미지·캡션 중앙 정렬 */
+.page__content figure.align-center {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.page__content figure.align-center img {
+	display: block;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page__content figure.figure--narrow img { max-width: min(400px, 100%); }
+.page__content figure.figure--wide img   { max-width: min(720px, 100%); }
