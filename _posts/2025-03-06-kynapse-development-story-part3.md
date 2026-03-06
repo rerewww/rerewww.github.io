@@ -1,5 +1,5 @@
 ---
-title: "이거 왜 안 돼요?: 사내 오픈 한 달, 피드백의 폭풍 속에서 살아남기"
+title: "이거 왜 안 돼요? 피드백의 폭풍 속에서 살아남기: 키냅스(kynapse) 사내 오픈"
 date: 2026-03-06
 categories: experience
 comments: false
