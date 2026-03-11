@@ -1,0 +1,11 @@
+---
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+## Posts
+
+{% for post in site.posts limit: 30 %}
+- [{{ post.title | markdownify | strip_html }}]({{ post.url | absolute_url }})
+{% endfor %}
