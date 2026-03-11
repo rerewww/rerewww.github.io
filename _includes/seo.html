@@ -127,6 +127,34 @@
   <link rel="next" href="{{ paginator.next_page_path | absolute_url }}">
 {% endif %}
 
+{% if page.date %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ page.title | markdownify | strip_html | strip_newlines | escape_once | jsonify }},
+      "description": {{ seo_description | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "author": {
+        "@type": "Person",
+        "name": {{ author.name | default: site.author.name | default: site.name | jsonify }},
+        "url": {{ seo_url | jsonify }}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ site.title | jsonify }},
+        "url": {{ seo_url | jsonify }}
+      }
+      {% assign blogposting_image = page_large_image | default: page_teaser_image | default: site_og_image %}
+      {% if blogposting_image %}
+      ,"image": {{ blogposting_image | jsonify }}
+      {% endif %}
+    }
+  </script>
+{% endif %}
+
 {% if site.og_image %}
   <script type="application/ld+json">
     {
